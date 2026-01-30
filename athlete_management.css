@@ -6,10 +6,9 @@
 .athlete-hero {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 550px;
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 
@@ -32,26 +31,25 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 .athlete-hero-content {
     position: relative;
     z-index: 2;
     max-width: 1200px;
-    padding: 0 40px;
-    text-align: left;
+    margin: 0 auto;
+    padding: 0 120px;
+    width: 100%;
 }
 
 .athlete-hero-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.4;
-    margin-bottom: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    margin-bottom: 20px;
+    max-width: 600px;
 }
 
 .title-orange {
@@ -64,13 +62,12 @@
 
 .athlete-hero-description {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 1.6;
     color: #FFFFFF;
-    max-width: 900px;
-    text-align: justify;
-    margin-bottom: 32px;
+    max-width: 550px;
+    margin-bottom: 28px;
 }
 
 .athlete-hero-buttons {
@@ -83,11 +80,11 @@
     background: #FFC107;
     color: #000000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
-    padding: 16px 40px;
+    padding: 14px 32px;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -98,18 +95,25 @@
     box-shadow: 0 8px 16px rgba(255, 193, 7, 0.3);
 }
 
-.link-join-player {
+
+.btn-join-player {
+    background: transparent;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 32px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.link-join-player:hover {
-    opacity: 0.8;
+.btn-join-player:hover {
+    background: #FFFFFF;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
 }
 
 /* Section Title Styles */
@@ -120,6 +124,18 @@
     color: #FF5722;
     text-align: center;
     margin-bottom: 16px;
+}
+
+.section-description-orange {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin: 0 auto 60px;
+    max-width: 800px;
 }
 
 .section-subtitle {
@@ -133,7 +149,7 @@
 
 /* Critical Gap Section */
 .critical-gap-section {
-    background: #FFFFFF;
+    background: #ffffff;
     padding: 100px 40px;
 }
 
@@ -194,7 +210,7 @@
 /* Our Athlete Management Model Section */
 .model-section {
     background: #FFFFFF;
-    padding: 100px 40px;
+    padding: 50px 40px;
 }
 
 .model-grid {
@@ -312,60 +328,101 @@
 /* Athlete Onboarding Flow Section */
 .onboarding-section {
     background: #FFFFFF;
-    padding: 100px 40px;
+    padding: 80px 40px;
 }
 
 .onboarding-flow {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 0;
 }
 
 .flow-step {
-    flex: 1;
-    background: #F9F9F9;
+    position: relative;
+}
+
+.flow-step-content {
+    background: #E53935;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 16px 24px;
+    text-align: center;
+    min-width: 180px;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%, 20px 50%);
+    position: relative;
+}
+
+.flow-step:first-child .flow-step-content {
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+    padding-left: 20px;
+}
+
+.flow-step:last-child .flow-step-content {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 20px 50%);
+    padding-right: 20px;
+}
+
+.flow-arrow {
+    width: 0;
+    height: 0;
+    margin: 0 -1px;
+}
+
+/* KPIs & Success Metrics Section */
+.kpi-section {
+    background: #F5F5F5;
+    padding: 80px 40px;
+}
+
+.kpi-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.kpi-card {
+    background: #D9D9D9;
     border-radius: 12px;
-    padding: 32px 24px;
+    padding: 40px 32px;
     text-align: center;
     transition: all 0.3s ease;
 }
 
-.flow-step:hover {
-    background: #FFFFFF;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+.kpi-card:hover {
     transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.flow-icon {
-    width: 56px;
-    height: 56px;
+.kpi-icon {
+    width: 48px;
+    height: 48px;
     margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.flow-title {
+.kpi-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: #000000;
     margin-bottom: 12px;
 }
 
-.flow-description {
+.kpi-description {
     font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
-    color: #666666;
-    line-height: 1.5;
-}
-
-.flow-arrow {
-    font-size: 32px;
-    color: #FF5722;
-    font-weight: 700;
-    flex-shrink: 0;
+    color: #333333;
+    line-height: 1.6;
 }
 
 /* JOIN OUR MISSION Section */
@@ -453,10 +510,21 @@
 
     .onboarding-flow {
         flex-wrap: wrap;
+        gap: 16px;
     }
 
     .flow-arrow {
         display: none;
+    }
+
+    .flow-step-content {
+        clip-path: none !important;
+        border-radius: 8px;
+        padding: 16px 24px !important;
+    }
+
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -485,7 +553,22 @@
 
     .onboarding-flow {
         flex-direction: column;
-        gap: 32px;
+        gap: 16px;
+    }
+
+    .flow-arrow {
+        display: none;
+    }
+
+    .flow-step-content {
+        clip-path: none !important;
+        border-radius: 8px;
+        padding: 16px 24px !important;
+    }
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .join-mission-title {
@@ -523,7 +606,8 @@
     .critical-gap-section,
     .model-section,
     .tiers-section,
-    .onboarding-section {
+    .onboarding-section,
+    .kpi-section {
         padding: 60px 24px;
     }
 
