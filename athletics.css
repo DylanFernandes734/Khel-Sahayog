@@ -154,11 +154,11 @@
 /* Programs Section */
 .athletics-programs-section {
     padding: 80px 40px;
-    background-color: #F9F9F9;
+    background-color: #000000;
 }
 
 .athletics-programs-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -169,47 +169,62 @@
 }
 
 .program-card {
-    background-color: #212121;
-    border-radius: 40px;
-    padding: 40px;
-    transition: transform 0.3s ease;
+    background-color: #2B2B2B;
+    border-radius: 20px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    width: 100%;
+    border: 1px solid #3a3a3a;
+    min-height: 450px;
 }
 
-.program-card:hover {
-    transform: translateY(-4px);
+.program-icon-large {
+    margin-bottom: 20px;
+}
+
+.program-icon-large svg {
+    width: 64px;
+    height: 64px;
 }
 
 .program-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: #FFFFFF;
-    margin-bottom: 32px;
+    color: #FF5722;
+    margin: 0 0 20px 0;
 }
 
-.program-features {
+.program-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 12px;
+    width: 100%;
 }
 
-.program-feature {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.program-icon {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-}
-
-.program-feature-text {
+.program-features-list li {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
     font-weight: 400;
-    color: #BDBDBD;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    padding-left: 20px;
+    position: relative;
+}
+
+.program-features-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 1.6;
 }
 
 /* Athlete Pathway Section */
