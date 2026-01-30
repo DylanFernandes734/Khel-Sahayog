@@ -163,13 +163,14 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 600px;
+    height: 550px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1920&q=80');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    justify-content: left;
 }
 
 .hero .container {
@@ -177,7 +178,9 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    padding-left: 80px;
+    max-width: none;
+    margin: 0;
+    padding: 0 40px;
 }
 
 .hero-overlay {
@@ -192,18 +195,21 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 600px;
-    padding: 80px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
     text-align: left;
 }
 
 .hero-title {
-    font-size: 48px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1.2;
     color: #E27934;
     margin-bottom: 24px;
     text-align: left;
+    max-width: 600px;
 }
 
 .gradient-text {
@@ -214,12 +220,15 @@ body {
 }
 
 .hero-description {
-    font-size: 18px;
+    font-size: 16px;
     color: #FFFFFF;
     margin-bottom: 32px;
+    margin-left: 0;
+    padding-left: 0;
     line-height: 1.6;
     opacity: 0.95;
     text-align: left;
+    max-width: 500px;
 }
 
 .hero-buttons {
