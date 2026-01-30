@@ -600,7 +600,45 @@ body {
 /* CTA Section */
 .cta-section {
     padding: 80px 0;
-    background-color: #FF7D1A;
+    background-color: #F25F25;
+}
+
+.btn-yellow {
+    background-color: #FFC107;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background-color: #FFB300;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+.btn-transparent-white {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-transparent-white:hover {
+    background-color: #FFFFFF;
+    color: #F25F25;
+    transform: translateY(-2px);
 }
 
 .cta-content {
