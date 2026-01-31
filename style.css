@@ -1733,3 +1733,12 @@ body {
     gap: 8px;
   }
 }
+/* ========================================
+   NAVBAR DROPDOWN GRID OVERRIDE
+   ======================================== */
+.sports-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 30px;
+    width: 350px;
+}
