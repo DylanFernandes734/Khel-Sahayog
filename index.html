@@ -33,6 +33,11 @@
       <div class="nav-buttons">
         <button class="btn-primary">Donate/Partner</button>
         <button class="btn-secondary">Contact Us</button>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
 
@@ -68,6 +73,9 @@
       </div>
     </div>
   </nav>
+
+  <!-- Dropdown Backdrop -->
+  <div class="dropdown-backdrop"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -454,49 +462,7 @@
     </div>
   </footer>
 
-  <script>
-    // Dropdown menu functionality
-    const programsDropdown = document.querySelector('.programs-dropdown');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    const dropdownBackdrop = document.querySelector('.dropdown-backdrop');
-    let dropdownTimeout;
-
-    // Show dropdown on hover
-    programsDropdown.addEventListener('mouseenter', () => {
-      clearTimeout(dropdownTimeout);
-      dropdownMenu.classList.add('active');
-      dropdownBackdrop.classList.add('active');
-    });
-
-    // Keep dropdown open when hovering over the menu
-    dropdownMenu.addEventListener('mouseenter', () => {
-      clearTimeout(dropdownTimeout);
-      dropdownMenu.classList.add('active');
-      dropdownBackdrop.classList.add('active');
-    });
-
-    // Hide dropdown when leaving the trigger
-    programsDropdown.addEventListener('mouseleave', () => {
-      dropdownTimeout = setTimeout(() => {
-        dropdownMenu.classList.remove('active');
-        dropdownBackdrop.classList.remove('active');
-      }, 100);
-    });
-
-    // Hide dropdown when leaving the menu
-    dropdownMenu.addEventListener('mouseleave', () => {
-      dropdownTimeout = setTimeout(() => {
-        dropdownMenu.classList.remove('active');
-        dropdownBackdrop.classList.remove('active');
-      }, 100);
-    });
-
-    // Hide dropdown when clicking on backdrop
-    dropdownBackdrop.addEventListener('click', () => {
-      dropdownMenu.classList.remove('active');
-      dropdownBackdrop.classList.remove('active');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
