@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
+
+            // Toggle backdrop for mobile drawer
+            if (dropdownBackdrop) {
+                dropdownBackdrop.classList.toggle('active');
+            }
         });
 
         // Close menu when clicking outside
@@ -58,6 +63,36 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target) && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
+
+                // Remove backdrop
+                if (dropdownBackdrop) {
+                    dropdownBackdrop.classList.remove('active');
+                }
+            }
+        });
+
+        // Close menu when clicking backdrop
+        if (dropdownBackdrop) {
+            dropdownBackdrop.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
+        }
+    }
+
+    // Mobile Programs Dropdown (inside drawer)
+    if (programsDropdown) {
+        programsDropdown.addEventListener('click', (e) => {
+            // Only handle click on mobile (when drawer is visible)
+            if (window.innerWidth <= 800) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Toggle dropdown menu visibility
+                if (dropdownMenu) {
+                    dropdownMenu.classList.toggle('mobile-active');
+                    programsDropdown.classList.toggle('expanded');
+                }
             }
         });
     }
