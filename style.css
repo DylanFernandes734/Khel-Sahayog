@@ -163,8 +163,8 @@ body {
 
 /* Dropdown Menu */
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 78px;
   left: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.95);
@@ -1970,9 +1970,20 @@ body {
     stroke: #212121;
   }
 
-  /* Hide desktop dropdown menu on mobile */
+  /* Reset dropdown menu positioning for mobile */
   .dropdown-menu {
-    display: none !important;
+    position: static;
+    transform: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: transparent;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
   }
 
   /* Add drawer buttons at bottom */
@@ -2015,15 +2026,11 @@ body {
 
   /* Show dropdown menu inside drawer when active */
   .dropdown-menu.mobile-active {
-    display: block !important;
-    position: static;
-    background: transparent;
-    box-shadow: none;
+    max-height: 1000px;
     opacity: 1;
     visibility: visible;
-    transform: none;
-    padding: 0;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .dropdown-menu.mobile-active .dropdown-container {
@@ -2031,6 +2038,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0;
+    grid-template-columns: none;
   }
 
   .dropdown-menu.mobile-active .dropdown-section {
