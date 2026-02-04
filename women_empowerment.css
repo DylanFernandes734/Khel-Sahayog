@@ -52,6 +52,7 @@
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
     line-height: 1.2;
+    max-width: 618px;
 }
 
 .women-hero-subtitle {
@@ -62,6 +63,7 @@
     line-height: 1.6;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;
+    max-width: 900px;
 }
 
 .btn-support-yellow {

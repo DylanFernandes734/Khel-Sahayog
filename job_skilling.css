@@ -56,7 +56,7 @@ a {
 .job-skilling-hero-title {
     font-family: "Lato", sans-serif;
     font-weight: 800;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 1.2em;
     color: #ff5722;
     margin-bottom: 24px;
@@ -66,12 +66,12 @@ a {
 .job-skilling-hero-subtitle {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5em;
     color: #ffffff;
     text-align: justify;
     margin-bottom: 32px;
-    max-width: 618px;
+    max-width: 800px;
 }
 
 .job-skilling-hero-buttons {
