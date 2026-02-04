@@ -168,4 +168,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Select all elements designed to animate
     const animateElements = document.querySelectorAll('.stat-item, .program-card, .role-card, .comparison-card-with-support, .comparison-card-without-support, .reveal-up, .reveal-left, .reveal-right, .reveal-fade');
     animateElements.forEach(el => observer.observe(el));
+
+    // Smooth Scroll for Anchor Links
+    // Handle all anchor links that point to page sections (start with #)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+
+            // Skip if it's just "#" without a target
+            if (targetId === '#' || !targetId) return;
+
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                e.preventDefault();
+
+                // Smooth scroll to the target element
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 });
