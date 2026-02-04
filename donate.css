@@ -514,6 +514,11 @@ button {
         padding: 0 20px;
     }
 
+    .hero {
+        padding-top: 270px;
+        padding-bottom: 230px;
+    }
+
     .hero-content {
         padding: 0 20px;
     }
