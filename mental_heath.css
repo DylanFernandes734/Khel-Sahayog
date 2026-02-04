@@ -609,6 +609,12 @@ body {
 /* ===================================
    Responsive Design
    =================================== */
+@media (max-width: 1200px) {
+    .what-we-do-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
     .comparison-cards {
         grid-template-columns: 1fr;
@@ -696,5 +702,123 @@ body {
     .btn-white {
         font-size: 16px;
         padding: 14px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mental-hero {
+        height: auto;
+        min-height: 500px;
+    }
+
+    .mental-hero-content {
+        padding: 100px 40px 60px;
+    }
+
+    .mental-hero-title {
+        font-size: 28px;
+    }
+
+    .mental-hero-subtitle {
+        font-size: 16px;
+    }
+
+    .what-we-do-section {
+        padding: 60px 40px;
+    }
+
+    .what-we-do-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer Mobile Styles (from style.css max-width: 1024px logic) */
+    .footer {
+        padding: 48px 0 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .footer-bottom {
+        padding: 0 40px;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .footer-legal {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 40px 0 0;
+    }
+
+    .footer-container {
+        padding: 0 20px;
+        padding-bottom: 32px;
+    }
+
+    .footer-brand {
+        gap: 12px;
+    }
+
+    .footer-description {
+        font-size: 13px;
+    }
+
+    .footer-social {
+        padding-top: 8px;
+    }
+
+    .social-icon svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .footer-heading {
+        font-size: 15px;
+    }
+
+    .footer-list a,
+    .footer-list li span {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        padding: 0 20px;
+    }
+
+    .footer-bottom-container {
+        padding: 20px 16px;
+    }
+
+    .footer-copyright,
+    .footer-legal a {
+        font-size: 12px;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        gap: 8px;
     }
 }

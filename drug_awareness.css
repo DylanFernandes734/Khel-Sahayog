@@ -449,3 +449,23 @@
         font-size: 14px;
     }
 }
+
+@media (max-width: 768px) {
+    .drug-hero {
+        height: auto;
+        min-height: 500px;
+        padding: 0;
+    }
+
+    .drug-hero-content {
+        padding: 100px 40px 60px;
+    }
+
+    .drug-hero-title {
+        font-size: 28px;
+    }
+
+    .drug-hero-subtitle {
+        font-size: 16px;
+    }
+}
