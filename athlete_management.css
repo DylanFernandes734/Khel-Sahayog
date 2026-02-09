@@ -40,7 +40,7 @@
 
 .athlete-hero-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 1.4;
     margin-bottom: 20px;
@@ -58,7 +58,7 @@
 .athlete-hero-description {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.6;
     color: #FFFFFF;
     max-width: 550px;
@@ -589,7 +589,7 @@
     }
 
     .athlete-hero-description {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 24px;
     }
 

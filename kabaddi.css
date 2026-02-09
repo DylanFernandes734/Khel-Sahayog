@@ -1,6 +1,3 @@
-
-
-
 :root {
     --primary-yellow: #FFB800;
     --primary-orange: #F05A28;
@@ -59,7 +56,7 @@
 .kabaddi-hero-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.3;
     margin: 0 0 20px 0;
     color: #FF5722;
@@ -68,8 +65,8 @@
 
 .kabaddi-hero-subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 14px;
     line-height: 1.6;
     color: var(--white);
     margin: 0 0 28px 0;

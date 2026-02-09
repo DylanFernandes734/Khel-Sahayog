@@ -58,7 +58,7 @@ body {
 .about-hero-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 36px;
   line-height: 1.2;
   background: linear-gradient(90deg, #FF5722 13%, #FF794E 53%, #FF5722 88%);
   -webkit-background-clip: text;

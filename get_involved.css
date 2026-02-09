@@ -1,6 +1,3 @@
-
-
-
 .get-involved-hero {
     position: relative;
     width: 100%;
@@ -44,7 +41,7 @@
 .get-involved-hero-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 36px;
     line-height: 1.2;
     background: linear-gradient(90deg, rgba(255, 87, 34, 1) 13%, rgba(255, 121, 78, 1) 53%, rgba(255, 87, 34, 1) 88%);
     -webkit-background-clip: text;
