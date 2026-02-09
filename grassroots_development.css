@@ -1,6 +1,3 @@
-
-
-
 .grassroots-hero {
     position: relative;
     width: 100%;
@@ -291,6 +288,12 @@
     margin-top: 60px;
 }
 
+.sport-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .sport-card {
     background: #1A1A1A;
     border-radius: 15px;
@@ -300,7 +303,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
+
 }
 
 .sport-card:hover {
@@ -310,7 +313,7 @@
 }
 
 
-.sport-card:nth-child(7) {
+.sport-card-link:nth-child(7) {
     grid-column: 2 / 3;
 }
 
@@ -355,6 +358,7 @@
     max-width: 800px;
     margin: 0 auto 40px;
     line-height: 1.6;
+    font-weight: bold;
 }
 
 .join-mission-buttons {
