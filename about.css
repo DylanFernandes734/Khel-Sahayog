@@ -7,7 +7,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   color: #000000;
   background-color: #ffffff;
@@ -19,7 +19,7 @@ body {
 .about-hero {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: clamp(20rem, 50vh, 31.25rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@ body {
 .about-hero-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
   line-height: 1.2;
   background: linear-gradient(90deg, #FF5722 13%, #FF794E 53%, #FF5722 88%);
   -webkit-background-clip: text;
@@ -70,36 +70,36 @@ body {
 
 .who-are-we-section {
   background-color: #ffffff;
-  padding: 40px 20px;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 1.5rem);
   width: 100%;
 }
 
 .section-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
   line-height: 1.2;
   background: linear-gradient(90deg, #FF5722 13%, #FF794E 53%, #FF5722 88%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   margin-top: 1.25rem;
 }
 
 .who-content {
-  max-width: 900px;
+  max-width: 56.25rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .who-paragraph {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.4;
   color: #000000;
   text-align: center;
@@ -109,21 +109,21 @@ body {
 
 .vision-mission-section {
   background-color: #212121;
-  padding: 40px 20px;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 1.5rem);
   width: 100%;
 }
 
 .vision-mission-container {
-  max-width: 900px;
+  max-width: 56.25rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .vm-card {
   background-color: #ffffff;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   overflow: hidden;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -136,7 +136,7 @@ body {
 
 .vm-card-image {
   width: 100%;
-  height: 220px;
+  height: 13.75rem;
   overflow: hidden;
   position: relative;
 }
@@ -152,47 +152,47 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 8px;
+  height: 0.5rem;
   background-color: #FFC107;
 }
 
 .vm-card-content {
-  padding: 30px;
+  padding: 1.875rem;
   background-color: #ffffff;
 }
 
 .vm-card-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   line-height: 1.2;
   color: #FF5722;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .vm-card-intro {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.4;
   color: #000000;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .vm-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .vm-list li {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.4;
   color: #000000;
-  padding-left: 24px;
-  margin-bottom: 8px;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
   position: relative;
 }
 
@@ -201,38 +201,38 @@ body {
   position: absolute;
   left: 0;
   color: #000000;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.4;
 }
 
 .vm-card-footer {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.4;
   color: #000000;
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
 
 .values-section {
   background-color: #F5F5F5;
-  padding: 40px 20px;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 1.5rem);
   width: 100%;
 }
 
 .values-grid {
-  max-width: 1400px;
+  max-width: 87.5rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .value-card {
   background-color: transparent;
   border-radius: 0;
-  padding: 20px 10px;
+  padding: 1.25rem 0.625rem;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -245,28 +245,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 12px;
-  height: 60px;
+  margin-bottom: 0.75rem;
+  height: 3.75rem;
 }
 
 .value-icon svg {
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
 }
 
 .value-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.3;
   color: #000000;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .value-description {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.5;
   color: #000000;
 }
@@ -274,27 +274,27 @@ body {
 
 .tournament-section {
   background-color: #D9D9D9;
-  padding: 40px 20px;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 1.5rem);
   width: 100%;
 }
 
 .tournament-intro {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   color: #000000;
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto 30px;
+  max-width: 56.25rem;
+  margin: 0 auto 1.875rem;
 }
 
 .tournament-container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
+  gap: 2.5rem;
   align-items: start;
 }
 
@@ -305,17 +305,17 @@ body {
 .tournament-benefits {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .tournament-benefits li {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: #000000;
-  margin-bottom: 10px;
-  padding-left: 24px;
+  margin-bottom: 0.625rem;
+  padding-left: 1.5rem;
   position: relative;
 }
 
@@ -325,47 +325,47 @@ body {
   left: 0;
   color: #000000;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .tournament-description {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   color: #000000;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .tournament-pipeline {
   background-color: #ffffff;
-  border-radius: 20px;
-  padding: 30px 20px;
+  border-radius: 1.25rem;
+  padding: 1.875rem 1.25rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .pipeline-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.3;
   color: #000000;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .pipeline-tiers {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .tier {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 15px;
-  border-radius: 30px;
+  gap: 0.75rem;
+  padding: 0.9375rem;
+  border-radius: 1.875rem;
   transition: transform 0.3s ease;
 }
 
@@ -389,8 +389,8 @@ body {
 }
 
 .tier-badge {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   background-color: #212121;
   border-radius: 50%;
   flex-shrink: 0;
@@ -399,7 +399,7 @@ body {
 .tier-content h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.4;
   margin: 0;
   color: #000000;
@@ -408,7 +408,7 @@ body {
 
 .join-mission-section {
   background-color: #FF5722;
-  padding: 40px 20px;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 1.5rem);
   text-align: center;
   width: 100%;
 }
@@ -416,38 +416,38 @@ body {
 .join-mission-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: clamp(1.75rem, 3.5vw, 2rem);
   line-height: 1.2;
   color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .join-mission-text {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   color: #ffffff;
-  max-width: 800px;
-  margin: 0 auto 24px;
+  max-width: 50rem;
+  margin: 0 auto 1.5rem;
 }
 
 .join-mission-buttons {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 .btn-partner {
-  padding: 12px 30px;
+  padding: 0.75rem 1.875rem;
   background-color: #FFC107;
   color: #000000;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
@@ -459,14 +459,14 @@ body {
 }
 
 .btn-donate-white {
-  padding: 12px 30px;
+  padding: 0.75rem 1.875rem;
   background-color: #ffffff;
   color: #FF5722;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
@@ -486,71 +486,71 @@ body {
   .vision-mission-section,
   .values-section,
   .tournament-section {
-    padding: 80px 40px;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 2.5rem);
   }
 
   .values-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 1.5rem;
   }
 
   .tournament-container {
-    gap: 50px;
+    gap: 3.125rem;
   }
 
   .join-mission-section {
-    padding: 60px 40px;
+    padding: clamp(2.5rem, 5vw, 3.75rem) clamp(1.5rem, 4vw, 2.5rem);
   }
 }
 
 
 @media (max-width: 768px) {
   .about-hero {
-    height: 350px;
+    height: clamp(18rem, 40vh, 21.875rem);
   }
 
   .about-hero-title {
-    font-size: 48px;
+    font-size: clamp(2.5rem, 5vw, 3rem);
   }
 
   .who-are-we-section,
   .vision-mission-section,
   .values-section,
   .tournament-section {
-    padding: 60px 30px;
+    padding: clamp(2.5rem, 5vw, 3.75rem) clamp(1.25rem, 3vw, 1.875rem);
   }
 
   .section-title,
   .section-title-left {
-    font-size: 28px;
-    margin-bottom: 32px;
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    margin-bottom: 2rem;
   }
 
   .who-paragraph {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .vision-mission-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 2.5rem;
   }
 
   .vm-card-content {
-    padding: 32px;
+    padding: 2rem;
   }
 
   .vm-card-title {
-    font-size: 28px;
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
   }
 
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   .tournament-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 2.5rem;
   }
 
   .tournament-content {
@@ -558,160 +558,160 @@ body {
   }
 
   .tournament-pipeline {
-    padding: 32px 24px;
+    padding: 2rem 1.5rem;
   }
 
   .join-mission-section {
-    padding: 50px 30px;
+    padding: clamp(2rem, 5vw, 3.125rem) clamp(1.25rem, 3vw, 1.875rem);
   }
 
   .join-mission-title {
-    font-size: 32px;
+    font-size: clamp(1.75rem, 3.5vw, 2rem);
   }
 
   .join-mission-text {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .join-mission-buttons {
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
   }
 
   .btn-partner,
   .btn-donate-white {
     width: 100%;
-    max-width: 300px;
+    max-width: 18.75rem;
   }
 }
 
 
 @media (max-width: 480px) {
   .about-hero {
-    height: 300px;
+    height: clamp(15rem, 35vh, 18.75rem);
   }
 
   .about-hero-title {
-    font-size: 36px;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
   }
 
   .who-are-we-section,
   .vision-mission-section,
   .values-section,
   .tournament-section {
-    padding: 50px 20px;
+    padding: clamp(2rem, 5vw, 3.125rem) clamp(1rem, 3vw, 1.25rem);
   }
 
   .section-title,
   .section-title-left {
-    font-size: 24px;
-    margin-bottom: 24px;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    margin-bottom: 1.5rem;
   }
 
   .who-paragraph {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .vm-card-image {
-    height: 220px;
+    height: 13.75rem;
   }
 
   .vm-card-content {
-    padding: 24px;
+    padding: 1.5rem;
   }
 
   .vm-card-title {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    margin-bottom: 1.25rem;
   }
 
   .vm-list li {
-    font-size: 15px;
-    margin-bottom: 12px;
+    font-size: 0.9375rem;
+    margin-bottom: 0.75rem;
   }
 
   .values-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 1rem;
   }
 
   .value-card {
-    padding: 28px 20px;
+    padding: 1.75rem 1.25rem;
   }
 
   .value-icon {
-    height: 64px;
-    margin-bottom: 16px;
+    height: 4rem;
+    margin-bottom: 1rem;
   }
 
   .value-icon svg {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
   }
 
   .value-title {
-    font-size: 18px;
-    margin-bottom: 12px;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
   }
 
   .value-description {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   .tournament-pipeline {
-    padding: 24px 20px;
+    padding: 1.5rem 1.25rem;
   }
 
   .pipeline-title {
-    font-size: 20px;
-    margin-bottom: 24px;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
   }
 
   .tier {
-    padding: 20px 16px;
-    gap: 16px;
+    padding: 1.25rem 1rem;
+    gap: 1rem;
   }
 
   .tier-number {
-    font-size: 28px;
-    min-width: 40px;
+    font-size: 1.75rem;
+    min-width: 2.5rem;
   }
 
   .tier-content h4 {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .tier-content p {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   .tier-arrow {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .tournament-benefits li {
-    font-size: 15px;
-    margin-bottom: 16px;
+    font-size: 0.9375rem;
+    margin-bottom: 1rem;
   }
 
   .join-mission-section {
-    padding: 40px 20px;
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 1.25rem);
   }
 
   .join-mission-title {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    margin-bottom: 1.25rem;
   }
 
   .join-mission-text {
-    font-size: 16px;
-    margin-bottom: 32px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .btn-partner,
   .btn-donate-white {
-    padding: 14px 32px;
-    font-size: 16px;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
   }
 }
