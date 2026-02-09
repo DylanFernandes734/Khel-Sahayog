@@ -255,7 +255,7 @@
     width: 100%;
 }
 
-.program-card {
+.program-card2 {
     background-color: #1C1C1C;
     padding: 48px;
     border-radius: 20px;
@@ -263,9 +263,22 @@
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
-    width: 100%;
+    width: 550px;
     border: 1px solid #2a2a2a;
-    min-height: 450px;
+    min-height: 250px;
+}
+
+.program-card1 {
+    background-color: #1C1C1C;
+    padding: 48px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    width: 550px;
+    border: 1px solid #2a2a2a;
+    min-height: 250px;
 }
 
 .program-icon-large {
@@ -283,6 +296,8 @@
     font-size: 24px;
     color: var(--primary-orange);
     margin: 0 0 20px 0;
+    text-align: center;
+    padding-left: 60px;
 }
 
 .program-features-list {
