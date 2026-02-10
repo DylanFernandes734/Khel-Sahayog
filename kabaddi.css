@@ -214,6 +214,7 @@
     font-size: 18px;
     color: var(--white);
     margin: 0 0 12px 0;
+    text-align: center;
 }
 
 .context-text {
@@ -223,6 +224,7 @@
     color: rgba(255, 255, 255, 0.8);
     margin: 0;
     line-height: 1.6;
+    text-align: center;
 }
 
 
@@ -404,7 +406,7 @@
 
 .impact-goal-section {
     background-color: #E8E8E8;
-    padding: 80px 40px;
+    padding: 50px 40px;
     border-bottom: 4px solid var(--primary-orange);
 }
 
@@ -439,24 +441,24 @@
 
 .impact-stat-box {
     background-color: var(--dark-grey);
-    padding: 48px 32px;
-    border-radius: 12px;
+    padding: 32px 24px;
+    border-radius: 8px;
     text-align: center;
 }
 
 .stat-number {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 64px;
+    font-size: 48px;
     color: var(--primary-yellow);
-    margin: 0 0 16px 0;
+    margin: 0 0 12px 0;
     line-height: 1;
 }
 
 .stat-label {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
     color: var(--white);
     margin: 0;
 }
