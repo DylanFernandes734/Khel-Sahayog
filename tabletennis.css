@@ -242,9 +242,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     width: 100%;
+    justify-items: center;
 }
 
-.program-card {
+.program-card2 {
     background-color: #1C1C1C;
     padding: 48px;
     border-radius: 20px;
@@ -252,18 +253,24 @@
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
+    max-width: 550px;
     width: 100%;
     border: 1px solid #2a2a2a;
-    min-height: 450px;
+    min-height: 250px;
 }
 
-.program-icon-large {
-    margin-bottom: 20px;
-}
-
-.program-icon-large svg {
-    width: 64px;
-    height: 64px;
+.program-card1 {
+    background-color: #1C1C1C;
+    padding: 48px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    max-width: 550px;
+    width: 100%;
+    border: 1px solid #2a2a2a;
+    min-height: 250px;
 }
 
 .program-title {

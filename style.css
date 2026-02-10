@@ -340,7 +340,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -373,7 +373,7 @@ body {
 .hero-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 50px;
   line-height: 1.219em;
   color: #FF5722;
   background: none;
@@ -384,8 +384,7 @@ body {
 
 .hero-description {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.5em;
   color: #eaebec;
   text-align: center;
@@ -393,7 +392,7 @@ body {
   max-width: 935px;
   margin-left: auto;
   margin-right: auto;
-  font-weight: bolder;
+  padding-top: 75px;
 }
 
 .hero-buttons {
@@ -429,7 +428,7 @@ body {
 .section-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 35px;
   line-height: 1.25em;
   color: #ff5722;
 
@@ -448,6 +447,7 @@ body {
   margin-right: auto;
   width: 90%;
   padding: 0 1rem;
+  text-align: center;
 }
 
 .program-card {
@@ -471,6 +471,7 @@ body {
 .program-card:hover .program-title {
   color: #FF5722;
   transition: color 0.3s ease;
+  text-align: center;
 }
 
 .program-image {
@@ -507,7 +508,7 @@ body {
   font-size: 0.8rem;
   line-height: 1.3em;
   color: #ff5722;
-  text-align: left;
+  text-align: center;
 
   margin-bottom: 0.5rem;
 
@@ -516,14 +517,12 @@ body {
 .program-description {
   font-family: "Montserrat", sans-serif;
 
-  font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.80rem;
   line-height: 1.4em;
 
   color: #000000;
 
-  text-align: left;
-  font-weight: bolder;
+  text-align: center;
 }
 
 
@@ -779,7 +778,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: justify;
-  font-weight: 500;
 }
 
 .story-text-with {
@@ -791,9 +789,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: left;
-  font-weight: 200;
   max-width: 550px;
-  font-weight: bolder;
 }
 
 .story-text-without {
@@ -1415,7 +1411,7 @@ body {
   }
 
   .hero-description {
-    font-size: 16px;
+    font-size: 200px;
     margin-bottom: 32px;
     padding: 0 40px;
   }

@@ -211,9 +211,10 @@ body {
     gap: 32px;
     max-width: 1000px;
     margin: 0 auto;
+    justify-items: center;
 }
 
-.program-card {
+.program-card2 {
     background-color: #2B2B2B;
     border-radius: 20px;
     padding: 48px;
@@ -221,18 +222,24 @@ body {
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
+    max-width: 550px;
     width: 100%;
     border: 1px solid #3a3a3a;
-    min-height: 450px;
+    min-height: 250px;
 }
 
-.program-icon-large {
-    margin-bottom: 20px;
-}
-
-.program-icon-large svg {
-    width: 64px;
-    height: 64px;
+.program-card1 {
+    background-color: #2B2B2B;
+    border-radius: 20px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    max-width: 550px;
+    width: 100%;
+    border: 1px solid #3a3a3a;
+    min-height: 250px;
 }
 
 .program-title {
