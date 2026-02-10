@@ -58,7 +58,7 @@
 
 .section-heading-orange {
     font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: 700;
     color: #FF5722;
     text-align: center;
@@ -72,6 +72,7 @@
     color: #666666;
     text-align: center;
     margin-bottom: 60px;
+    font-weight: bold;
 }
 
 .section-text {
@@ -81,6 +82,8 @@
     color: #333333;
     line-height: 1.8;
     text-align: justify;
+    font-weight: bold;
+    text-align: center;
 }
 
 
@@ -285,6 +288,12 @@
     margin-top: 60px;
 }
 
+.sport-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .sport-card {
     background: #1A1A1A;
     border-radius: 15px;
@@ -304,7 +313,7 @@
 }
 
 
-.sport-card:nth-child(7) {
+.sport-card-link:nth-child(7) {
     grid-column: 2 / 3;
 }
 
@@ -349,6 +358,7 @@
     max-width: 800px;
     margin: 0 auto 40px;
     line-height: 1.6;
+    font-weight: bold;
 }
 
 .join-mission-buttons {
