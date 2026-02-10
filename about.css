@@ -197,7 +197,6 @@ body {
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
   position: relative;
-  font-weight: bold;
 }
 
 .vm-list li::before {
