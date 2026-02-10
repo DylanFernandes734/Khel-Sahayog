@@ -352,10 +352,7 @@
         width: 100%;
     }
 
-    .footer-legal {
-        flex-direction: column;
-        gap: 8px;
-    }
+
 
 
     .dropdown-menu.mobile-active {
