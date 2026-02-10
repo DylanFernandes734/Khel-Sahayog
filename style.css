@@ -1008,7 +1008,7 @@ body {
 
 
 .support-section {
-  background-color: #ffffff;
+  background-color: #FF5722;
 
   padding: 100px 5%;
   text-align: center;
@@ -1030,16 +1030,18 @@ body {
   max-width: 56.25rem;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 
 .support-description {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.4;
   color: #555555;
   max-width: 43.75rem;
   margin: 0 auto 2.5rem;
+  color: white;
 }
 
 .support-section .btn-primary {
@@ -1050,8 +1052,8 @@ body {
   height: 3.5rem;
   font-size: 1.125rem;
   font-weight: 700;
-  background-color: #ff5722;
-  color: #ffffff;
+  background-color: #ffb800;
+  color: #000000;
   border-radius: 0.75rem;
   margin: 0 auto;
   box-shadow: 0 0.25rem 0.9375rem rgba(255, 87, 34, 0.4);

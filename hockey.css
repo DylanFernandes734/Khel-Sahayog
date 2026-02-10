@@ -9,8 +9,6 @@
     --white: #FFFFFF;
 }
 
-
-
 .hockey-hero {
     position: relative;
     width: 100%;
@@ -188,6 +186,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    text-align: center;
 }
 
 .context-box {
@@ -214,6 +213,7 @@
     font-size: 18px;
     color: var(--white);
     margin: 0 0 12px 0;
+    text-align: center;
 }
 
 .context-text {
@@ -223,9 +223,8 @@
     color: rgba(255, 255, 255, 0.8);
     margin: 0;
     line-height: 1.6;
+    text-align: center;
 }
-
-
 
 .hockey-programs-section {
     background-color: #111111;
@@ -414,7 +413,6 @@
 .impact-goal-section {
     background-color: #E8E8E8;
     padding: 80px 40px;
-    border-bottom: 4px solid var(--primary-orange);
 }
 
 .impact-goal-container {
@@ -469,8 +467,6 @@
     color: var(--white);
     margin: 0;
 }
-
-
 
 .hockey-cta-section {
     background-color: var(--primary-orange);
