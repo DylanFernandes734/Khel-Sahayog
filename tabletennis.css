@@ -279,6 +279,7 @@
     font-size: 24px;
     color: var(--primary-orange);
     margin: 0 0 20px 0;
+    text-align: center;
 }
 
 .program-features-list {
