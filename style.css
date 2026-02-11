@@ -1306,8 +1306,8 @@ body {
 }
 
 .footer-contact-list path {
-  fill: #FFFFFF;
-
+  fill: none;
+  stroke: #FFFFFF;
 }
 
 
