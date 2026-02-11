@@ -253,51 +253,7 @@ body {
 
 
 
-.footer {
-    background-color: #263238;
-    width: 100%;
-    margin: 0;
-    color: #ffffff;
-    padding: 100px 0 0;
-}
 
-.footer-container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 120px 60px;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 40px;
-    border-bottom: 1px solid #D4D6D7;
-}
-
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 280px;
-    flex-shrink: 0;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-.footer-logo-img {
-    width: 64px;
-    height: 64px;
-}
-
-.footer-logo-text {
-    font-family: 'Teko', sans-serif;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 52px;
-    text-transform: uppercase;
-    color: #EAEBEC;
-}
 
 
 
