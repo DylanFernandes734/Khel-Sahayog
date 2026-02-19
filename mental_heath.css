@@ -1,21 +1,30 @@
-:root {
+/* ============================================================
+   Mental Health & Well-being for Youth — mental_heath.css
+   Brand Colors: Primary Orange #FF5722 | Accent Yellow #FFC107
+   ============================================================ */
 
+:root {
     --primary-orange: #FF5722;
-    --accent-yellow: #FFB703;
+    --accent-yellow: #FFC107;
     --dark-bg: #1D1D1D;
     --white: #FFFFFF;
     --light-gray: #F5F5F5;
+    --mid-gray: #E0E0E0;
     --text-dark: #333333;
-
+    --text-muted: #555555;
 
     --font-primary: 'Montserrat', sans-serif;
+    --font-heading: 'Lato', sans-serif;
 
-
-    --container-max-width: 1200px;
-    --section-padding: 80px 20px;
+    --container-max: 1200px;
+    --section-py: clamp(3rem, 6vw, 5rem);
+    --section-px: clamp(1rem, 5vw, 2rem);
 }
 
-* {
+/* ── Reset ──────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,27 +37,30 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding: 0 20px;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
+/* ── Shared container ───────────────────────────────────── */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--section-px);
+}
 
-
-
-
-
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
 .mental-hero {
     position: relative;
     width: 100%;
-    height: 600px;
-
+    height: 550px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding-left: 10%;
     overflow: hidden;
-    margin: 0;
     background-image: url('images/mental.jpg');
     background-size: cover;
     background-position: center;
@@ -57,37 +69,33 @@ body {
 
 .mental-hero-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: linear-gradient(90deg,
-            rgba(0, 0, 0, 0.75) 0%,
-            rgba(0, 0, 0, 0.4) 50%,
-            rgba(0, 0, 0, 0.2) 100%);
+            rgba(0, 0, 0, 0.80) 0%,
+            rgba(0, 0, 0, 0.45) 55%,
+            rgba(0, 0, 0, 0.15) 100%);
     z-index: 1;
 }
 
 .mental-hero-content {
     position: relative;
     z-index: 2;
-    padding: 0 129px;
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
+    text-align: left;
+    max-width: 800px;
+    padding: 0 40px 0 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
 }
 
 .mental-hero-title {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: 800;
     color: #FF5722;
-    margin-bottom: 24px;
-    line-height: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    line-height: 1.2;
     max-width: 618px;
 }
 
@@ -96,258 +104,343 @@ body {
     font-size: 14px;
     font-weight: 700;
     color: #FFFFFF;
-    line-height: 1.5em;
-    margin-bottom: 32px;
-    text-align: justify;
-    max-width: 800px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    max-width: 900px;
 }
 
 .mental-hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn-donate-hero {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
+    display: inline-block;
     background-color: #FFC107;
     color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 14px 28px;
     border: none;
     border-radius: 8px;
-    padding: 12px 24px;
     cursor: pointer;
-    box-shadow: 0px 4px 12px rgba(255, 87, 34, 0.21);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-donate-hero:hover {
     transform: translateY(-2px);
-    background-color: #FFB300;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
 }
 
-.btn-contact-hero {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    background-color: #FF794E;
-    color: #000000;
-    border: 1px solid #070707;
-    border-radius: 8px;
-    padding: 12px 24px;
-    cursor: pointer;
-    box-shadow: 0px 4px 12px rgba(255, 87, 34, 0.21);
-    transition: all 0.3s ease;
+/* ============================================================
+   THE COMMUNITY GAP — SPLIT PANEL
+   ============================================================ */
+.community-gap-section {
+    background-color: #FFF7F4;
+    padding: var(--section-py) var(--section-px);
 }
 
-.btn-contact-hero:hover {
-    transform: translateY(-2px);
-    background-color: #F4511E;
+.community-gap-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3rem;
+    align-items: center;
 }
 
-
-
-.cta-button:hover {
-    background-color: #e5a503;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(255, 183, 3, 0.3);
-}
-
-
-.problem-gap {
-    padding: 50px 20px;
-    background-color: var(--white);
-}
-
-.section-title {
-    font-size: 36px;
-    font-weight: 800;
-    color: var(--primary-orange);
-    text-align: center;
-    margin-bottom: 48px;
-}
-
-.comparison-cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    align-items: stretch;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.comparison-card {
-    background-color: var(--dark-bg);
-    padding: 25px 20px;
-    border-radius: 20px;
-    width: 400px;
-    min-height: auto;
+/* Left text panel */
+.gap-text-panel {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: 3px solid var(--primary-orange);
-    transition: transform 0.3s ease;
+    gap: 0.75rem;
 }
 
-.comparison-card:hover {
-    transform: translateY(-4px);
-}
-
-
-.card-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 24px;
-}
-
-.card-title {
-    font-size: 20px;
+.gap-eyebrow {
+    font-size: 0.8rem;
     font-weight: 700;
-    color: #FFC107;
-    margin-bottom: 20px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-yellow);
 }
 
-.card-list {
-    list-style: none;
-    color: var(--white);
+.gap-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.15;
 }
 
-.card-list li {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.4;
-    margin-bottom: 15px;
-    padding-left: 25px;
-    position: relative;
+.gap-intro {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-top: 0.5rem;
 }
 
-.card-list li::before {
-    content: "▸";
-    position: absolute;
-    left: 0;
-    font-size: 20px;
-    color: var(--primary-orange);
+/* Right items panel */
+.gap-items-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
-
-
-.what-we-do-section {
-    padding: 50px 20px;
-    background-color: #f5f5f5;
-    width: 100%;
-    margin: 0;
+.gap-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--white);
+    border: 1px solid rgba(255, 87, 34, 0.3);
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.what-we-do-container {
-    max-width: 1440px;
+.gap-item:hover {
+    background: #FFF0EB;
+    border-color: var(--primary-orange);
+    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.12);
+}
+
+.gap-item-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.gap-item p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   OUR COMMUNITY APPROACH — ICON CARDS
+   ============================================================ */
+.approach-section {
+    padding: var(--section-py) var(--section-px);
+    background-color: var(--light-gray);
+}
+
+.approach-container {
+    max-width: var(--container-max);
     margin: 0 auto;
 }
 
-.what-we-do-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.approach-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    font-weight: 800;
+    color: var(--primary-orange);
+    text-align: center;
+    margin-bottom: 0.6rem;
 }
 
-.solution-card {
-    background-color: #e0e0e0;
-    border-radius: 15px;
-    padding: 25px 20px;
+.approach-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+}
+
+.approach-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 1.75rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    border-bottom: 3px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.solution-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+.approach-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(255, 87, 34, 0.15);
+    border-color: var(--primary-orange);
 }
 
-.solution-card-icon {
-    font-size: 56px;
-
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.approach-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-.solution-card-title {
-    font-family: "Montserrat", sans-serif;
+.approach-card-title {
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 1.3em;
-    color: #000000;
-    margin-bottom: 10px;
+    color: var(--text-dark);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
 }
 
-.solution-card-description {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 1.4em;
-    color: #424242;
+.approach-card-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.55;
 }
 
-.section-heading-orange {
-    font-family: "Montserrat", sans-serif;
+/* ============================================================
+   MASS IMPACT — STAT COUNTERS
+   ============================================================ */
+.impact-section {
+    padding: var(--section-py) var(--section-px);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d1a0e 50%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative background glow */
+.impact-section::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 87, 34, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.impact-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.impact-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     font-weight: 800;
-    font-size: 30px;
-    line-height: 1.2em;
-    color: #ff5722;
+    color: var(--white);
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 0.6rem;
 }
 
+.impact-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    margin-bottom: 3rem;
+}
 
+.impact-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
 
+.impact-stat {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 193, 7, 0.25);
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.impact-stat:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 87, 34, 0.12);
+    border-color: var(--primary-orange);
+}
+
+.impact-stat-number {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--accent-yellow);
+    line-height: 1;
+}
+
+.impact-stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Goal card has orange accent instead of yellow */
+.impact-stat-goal .impact-stat-number {
+    font-size: 3rem;
+}
+
+.impact-stat-goal {
+    border-color: rgba(255, 87, 34, 0.4);
+}
+
+.impact-stat-goal:hover {
+    border-color: var(--accent-yellow);
+}
+
+/* ============================================================
+   JOIN OUR MISSION CTA
+   ============================================================ */
 .join-mission-section {
-    background-color: #FF5722;
-    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 1.5rem);
+    background-color: var(--primary-orange);
+    padding: clamp(2.5rem, 5vw, 4rem) var(--section-px);
     text-align: center;
     width: 100%;
 }
 
 .join-mission-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: clamp(1.75rem, 3.5vw, 2rem);
-    line-height: 1.2;
-    color: #ffffff;
-    margin-bottom: 1rem;
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: var(--white);
+    margin-bottom: 0.875rem;
 }
 
 .join-mission-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-primary);
     font-weight: 500;
     font-size: 1rem;
-    line-height: 1.5;
-    color: #ffffff;
-    max-width: 50rem;
-    margin: 0 auto 1.5rem;
+    color: var(--white);
+    max-width: 46rem;
+    margin: 0 auto 1.75rem;
+    line-height: 1.6;
+    opacity: 0.95;
 }
 
 .join-mission-buttons {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     flex-wrap: wrap;
 }
 
 .btn-partner {
-    padding: 0.75rem 1.875rem;
-    background-color: #FFC107;
-    color: #000000;
-    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--accent-yellow);
+    color: #000;
+    font-family: var(--font-primary);
     font-weight: 700;
     font-size: 1rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-partner:hover {
@@ -356,16 +449,17 @@ body {
 }
 
 .btn-donate-white {
-    padding: 0.75rem 1.875rem;
-    background-color: #FFFFFF;
-    color: #FF5722;
-    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--white);
+    color: var(--primary-orange);
+    font-family: var(--font-primary);
     font-weight: 700;
     font-size: 1rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-donate-white:hover {
@@ -373,97 +467,46 @@ body {
     transform: translateY(-2px);
 }
 
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 1100px)
+   ============================================================ */
+@media (max-width: 1100px) {
+    .approach-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-
-
-@media (max-width: 1200px) {
-    .what-we-do-grid {
+    .impact-stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 1024px) {
-    .comparison-cards {
+/* ============================================================
+   RESPONSIVE — SMALL TABLET (≤ 820px)
+   ============================================================ */
+@media (max-width: 820px) {
+    .community-gap-inner {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 36px;
+        gap: 2rem;
     }
 
-    .hero-description {
-        font-size: 18px;
-        text-align: left;
-    }
-
-    .section-title,
-    .section-title-center {
-        font-size: 28px;
-    }
-
-    .mission-title {
-        font-size: 32px;
-    }
-
-    .mission-description {
-        font-size: 18px;
-    }
-
-    .feature-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .mission-buttons {
-        flex-direction: column;
+    .gap-text-panel {
+        text-align: center;
         align-items: center;
     }
 
-    .btn-yellow,
-    .btn-white {
-        width: 100%;
-        max-width: 300px;
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 480px) {
-    :root {
-        --section-padding: 50px 16px;
-    }
-
-    .hero {
-        min-height: 500px;
-    }
-
-    .hero-title {
-        font-size: 28px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .comparison-card {
-        padding: 24px;
-    }
-
-    .feature-card {
-        padding: 32px 24px;
-    }
-
-    .cta-button,
-    .btn-yellow,
-    .btn-white {
-        font-size: 16px;
-        padding: 14px 32px;
-    }
-}
-
-@media (max-width: 768px) {
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 600px)
+   ============================================================ */
+@media (max-width: 600px) {
     .mental-hero {
         height: auto;
         min-height: 500px;
+        padding: 0;
     }
 
     .mental-hero-content {
@@ -475,18 +518,26 @@ body {
     }
 
     .mental-hero-subtitle {
-        font-size: 14px;
+        font-size: 13px;
     }
 
-    .what-we-do-section {
-        padding: 60px 40px;
-    }
-
-    .what-we-do-grid {
+    .approach-grid {
         grid-template-columns: 1fr;
     }
-}
-a {
-   color: inherit;
-   text-decoration: none;
+
+    .impact-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .join-mission-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-partner,
+    .btn-donate-white {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
 }
