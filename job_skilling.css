@@ -1,288 +1,433 @@
-.job-skilling-hero {
+/* ============================================================
+   Youth Skills & Livelihoods — job_skilling.css
+   Brand Colors: Primary Orange #FF5722 | Accent Yellow #FFC107
+   Standard: mirrors mental_heath.css exactly
+   ============================================================ */
+
+:root {
+    --primary-orange: #FF5722;
+    --accent-yellow: #FFC107;
+    --dark-bg: #1D1D1D;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --mid-gray: #E0E0E0;
+    --text-dark: #333333;
+    --text-muted: #555555;
+
+    --font-primary: 'Montserrat', sans-serif;
+    --font-heading: 'Lato', sans-serif;
+
+    --container-max: 1200px;
+    --section-py: clamp(3rem, 6vw, 5rem);
+    --section-px: clamp(1rem, 5vw, 2rem);
+}
+
+/* ── Reset ──────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.job-hero {
     position: relative;
     width: 100%;
-    height: 600px;
-
+    min-height: 550px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
-    margin: 0;
-}
-
-.job-skilling-hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("images/athletics-hero-bg.png");
+    background-image: url('images/gallery-6.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.job-skilling-hero-overlay {
+.job-hero-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: linear-gradient(90deg,
-            rgba(0, 0, 0, 0.75) 0%,
-            rgba(0, 0, 0, 0.4) 50%,
-            rgba(0, 0, 0, 0.2) 100%);
+            rgba(0, 0, 0, 0.80) 0%,
+            rgba(0, 0, 0, 0.45) 55%,
+            rgba(0, 0, 0, 0.15) 100%);
+    z-index: 1;
 }
 
-.job-skilling-hero-content {
+.job-hero-content {
     position: relative;
-    z-index: 1;
-    padding: 0 129px;
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
+    z-index: 2;
+    padding: 120px clamp(1.5rem, 9vw, 8rem) 80px;
+    max-width: 720px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
 }
 
-a {
-    text-decoration: none;
-}
-
-.job-skilling-hero-title {
-    font-family: "Lato", sans-serif;
+.job-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 800;
-    font-size: 36px;
-    line-height: 1.2em;
-    color: #ff5722;
-    margin-bottom: 24px;
-    max-width: 700px;
+    color: var(--primary-orange);
+    margin-bottom: 1.25rem;
+    line-height: 1.15;
 }
 
-.job-skilling-hero-subtitle {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    line-height: 1.5em;
-    color: #ffffff;
-    text-align: justify;
-    margin-bottom: 32px;
-    max-width: 800px;
-}
-
-.job-skilling-hero-buttons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.btn-support-yellow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 28px;
-    background-color: #ffc107;
-    color: #000000;
-    font-family: "Montserrat", sans-serif;
+.job-hero-subtitle {
+    font-family: var(--font-primary);
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
     font-weight: 600;
-    font-size: 18px;
-    line-height: 1.2em;
+    color: var(--white);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.job-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-donate-hero {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--accent-yellow);
+    color: #000;
     border: none;
     border-radius: 8px;
+    padding: 0.75rem 1.75rem;
     cursor: pointer;
-    box-shadow: 4px 0px 9.1px 0px rgba(255, 87, 34, 0.21);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(255, 87, 34, 0.25);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-support-yellow:hover {
+.btn-donate-hero:hover {
+    background-color: #FFB300;
     transform: translateY(-2px);
-    box-shadow: 4px 0px 12px 0px rgba(255, 87, 34, 0.3);
 }
 
-
-.problem-gap-section {
-    padding: 50px 129px;
-    background-color: #ffffff;
-    width: 100%;
-    margin: 0;
+/* ============================================================
+   THE COMMUNITY GAP — SPLIT PANEL
+   ============================================================ */
+.job-gap-section {
+    background-color: #FFF7F4;
+    padding: var(--section-py) var(--section-px);
 }
 
-.problem-gap-container {
-    max-width: 1440px;
+.job-gap-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.job-gap-text-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.job-gap-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-yellow);
+}
+
+.job-gap-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.15;
+}
+
+.job-gap-intro {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+.job-gap-items-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.job-gap-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--white);
+    border: 1px solid rgba(255, 87, 34, 0.3);
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-gap-item:hover {
+    background: #FFF0EB;
+    border-color: var(--primary-orange);
+    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.12);
+}
+
+.job-gap-item-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.job-gap-item p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   OUR COMMUNITY APPROACH — ICON CARDS
+   ============================================================ */
+.job-approach-section {
+    padding: var(--section-py) var(--section-px);
+    background-color: var(--light-gray);
+}
+
+.job-approach-container {
+    max-width: var(--container-max);
     margin: 0 auto;
 }
 
-.section-heading-orange {
-    font-family: "Montserrat", sans-serif;
+.job-approach-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
     font-weight: 800;
-    font-size: 30px;
-    line-height: 1.2em;
-    color: #ff5722;
+    color: #FF5722;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 0.6rem;
 }
 
-.problem-gap-content {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    align-items: stretch;
+.job-approach-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+    margin-bottom: 2.5rem;
 }
 
-.problem-card {
-    background-color: #212121;
-    border: 3px solid #ff5722;
-    border-radius: 20px;
-    padding: 25px 20px;
-    width: 400px;
-    min-height: auto;
+.job-approach-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+}
+
+.job-approach-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 1.75rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.problem-card-icon {
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.problem-card-title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.2em;
-    color: #FFC107;
     text-align: center;
-    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    border-bottom: 3px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.problem-card-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.job-approach-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(255, 87, 34, 0.15);
+    border-color: var(--primary-orange);
 }
 
-.problem-card-list li {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.4em;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 15px;
-    padding-left: 20px;
+.job-approach-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.job-approach-card-title {
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+}
+
+.job-approach-card-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+/* ============================================================
+   MASS IMPACT — STAT COUNTERS
+   ============================================================ */
+.job-impact-section {
+    padding: var(--section-py) var(--section-px);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d1a0e 50%, #1a1a1a 100%);
     position: relative;
+    overflow: hidden;
 }
 
-.problem-card-list li::before {
-    content: "•";
+.job-impact-section::before {
+    content: '';
     position: absolute;
-    left: 0;
-    color: #ff5722;
-    font-size: 20px;
-    line-height: 1.2em;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 87, 34, 0.12) 0%, transparent 70%);
+    pointer-events: none;
 }
 
-
-.what-we-do-section {
-    padding: 50px 129px;
-    background-color: #f5f5f5;
-    width: 100%;
-    margin: 0;
-}
-
-.what-we-do-container {
-    max-width: 1440px;
+.job-impact-container {
+    max-width: var(--container-max);
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
-.what-we-do-grid {
+.job-impact-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+
+.job-impact-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    margin-bottom: 3rem;
+}
+
+.job-impact-stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 1.5rem;
 }
 
-.solution-card {
-    background-color: #e0e0e0;
-    border-radius: 15px;
-    padding: 25px 20px;
+.job-impact-stat {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 193, 7, 0.25);
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 0.75rem;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
-.solution-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+.job-impact-stat:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 87, 34, 0.12);
+    border-color: var(--primary-orange);
 }
 
-.solution-card-title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.3em;
-    color: #000000;
-    margin-bottom: 10px;
+.job-impact-stat-number {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--accent-yellow);
+    line-height: 1;
 }
 
-.solution-card-description {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 1.4em;
-    color: #424242;
+.job-impact-stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    line-height: 1.5;
 }
 
+.job-impact-stat-goal .job-impact-stat-number {
+    font-size: 3rem;
+}
 
+.job-impact-stat-goal {
+    border-color: rgba(255, 87, 34, 0.4);
+}
 
+.job-impact-stat-goal:hover {
+    border-color: var(--accent-yellow);
+}
+
+/* ============================================================
+   JOIN OUR MISSION CTA
+   ============================================================ */
 .join-mission-section {
-    background-color: #FF5722;
-    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 1.5rem);
+    background-color: var(--primary-orange);
+    padding: clamp(2.5rem, 5vw, 4rem) var(--section-px);
     text-align: center;
     width: 100%;
 }
 
 .join-mission-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: clamp(1.75rem, 3.5vw, 2rem);
-    line-height: 1.2;
-    color: #ffffff;
-    margin-bottom: 1rem;
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: var(--white);
+    margin-bottom: 0.875rem;
 }
 
 .join-mission-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-primary);
     font-weight: 500;
     font-size: 1rem;
-    line-height: 1.5;
-    color: #ffffff;
-    max-width: 50rem;
-    margin: 0 auto 1.5rem;
+    color: var(--white);
+    max-width: 46rem;
+    margin: 0 auto 1.75rem;
+    line-height: 1.6;
+    opacity: 0.95;
 }
 
 .join-mission-buttons {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     flex-wrap: wrap;
 }
 
 .btn-partner {
-    padding: 0.75rem 1.875rem;
-    background-color: #FFC107;
-    color: #000000;
-    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--accent-yellow);
+    color: #000;
+    font-family: var(--font-primary);
     font-weight: 700;
     font-size: 1rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-partner:hover {
@@ -291,16 +436,17 @@ a {
 }
 
 .btn-donate-white {
-    padding: 0.75rem 1.875rem;
-    background-color: #FFFFFF;
-    color: #FF5722;
-    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--white);
+    color: var(--primary-orange);
+    font-family: var(--font-primary);
     font-weight: 700;
     font-size: 1rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-donate-white:hover {
@@ -308,74 +454,77 @@ a {
     transform: translateY(-2px);
 }
 
-
-@media (max-width: 1200px) {
-    .problem-gap-content {
-        flex-direction: column;
-        align-items: center;
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 1100px)
+   ============================================================ */
+@media (max-width: 1100px) {
+    .job-approach-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .problem-card {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .what-we-do-grid {
+    .job-impact-stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
-    .job-skilling-hero {
-        height: auto;
-        min-height: 500px;
+/* ============================================================
+   RESPONSIVE — SMALL TABLET (≤ 820px)
+   ============================================================ */
+@media (max-width: 820px) {
+    .job-gap-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .job-skilling-hero-content {
+    .job-gap-text-panel {
+        text-align: center;
+        align-items: center;
+    }
+
+    .job-approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 600px)
+   ============================================================ */
+@media (max-width: 600px) {
+    .job-hero {
+        height: auto;
+        min-height: 500px;
+        padding: 0;
+    }
+
+    .job-hero-content {
         padding: 100px 40px 60px;
     }
 
-    .job-skilling-hero-title {
+    .job-hero-title {
         font-size: 28px;
     }
 
-    .job-skilling-hero-subtitle {
-        font-size: 16px;
+    .job-hero-subtitle {
+        font-size: 13px;
     }
 
-    .problem-gap-section,
-    .what-we-do-section,
-    .join-mission-section {
-        padding: 60px 40px;
-    }
-
-    .section-heading-orange {
-        font-size: 28px;
-    }
-
-    .what-we-do-grid {
+    .job-approach-grid {
         grid-template-columns: 1fr;
     }
 
-    .join-mission-title {
-        font-size: 32px;
-    }
-
-    .join-mission-text {
-        font-size: 16px;
+    .job-impact-stats-grid {
+        grid-template-columns: 1fr;
     }
 
     .join-mission-buttons {
         flex-direction: column;
-        width: 100%;
+        align-items: center;
     }
 
-    .btn-donate-yellow,
-    .btn-get-involved-white {
+    .btn-partner,
+    .btn-donate-white {
         width: 100%;
+        max-width: 280px;
+        text-align: center;
     }
-}
-a {
-   color: inherit;
-   text-decoration: none;
 }

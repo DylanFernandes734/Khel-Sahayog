@@ -55,11 +55,10 @@ a {
 .mental-hero {
     position: relative;
     width: 100%;
-    height: 550px;
+    min-height: 550px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 10%;
     overflow: hidden;
     background-image: url('images/mental.jpg');
     background-size: cover;
@@ -80,34 +79,30 @@ a {
 .mental-hero-content {
     position: relative;
     z-index: 2;
-    text-align: left;
-    max-width: 800px;
-    padding: 0 40px 0 0;
+    padding: 120px clamp(1.5rem, 9vw, 8rem) 80px;
+    max-width: 720px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .mental-hero-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 36px;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 800;
-    color: #FF5722;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-    line-height: 1.2;
-    max-width: 618px;
+    color: var(--primary-orange);
+    margin-bottom: 1.25rem;
+    line-height: 1.15;
 }
 
 .mental-hero-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: #FFFFFF;
-    line-height: 1.6;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 30px;
-    max-width: 900px;
+    font-family: var(--font-primary);
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 600px;
 }
 
 .mental-hero-buttons {
@@ -118,21 +113,22 @@ a {
 
 .btn-donate-hero {
     display: inline-block;
-    background-color: #FFC107;
-    color: #000000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-primary);
+    font-size: 1rem;
     font-weight: 700;
-    font-size: 16px;
-    padding: 14px 28px;
+    background-color: var(--accent-yellow);
+    color: #000;
     border: none;
     border-radius: 8px;
+    padding: 0.75rem 1.75rem;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px rgba(255, 87, 34, 0.25);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-donate-hero:hover {
+    background-color: #FFB300;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
 }
 
 /* ============================================================
@@ -237,7 +233,7 @@ a {
     font-family: var(--font-heading);
     font-size: clamp(1.75rem, 3.5vw, 2.25rem);
     font-weight: 800;
-    color: var(--primary-orange);
+    color: #FF5722;
     text-align: center;
     margin-bottom: 0.6rem;
 }
