@@ -74,7 +74,7 @@ a {
     position: relative;
     z-index: 2;
     padding: 120px clamp(1.5rem, 9vw, 8rem) 80px;
-    max-width: 720px;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -96,7 +96,7 @@ a {
     color: var(--white);
     line-height: 1.65;
     margin-bottom: 2rem;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .drug-hero-buttons {
