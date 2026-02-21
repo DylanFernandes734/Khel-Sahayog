@@ -1266,9 +1266,9 @@ a {
   align-items: lef;
   /* Text aligns to the right, towards the logo */
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   /* Extra bold for impact */
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.1;
   text-transform: uppercase;
   color: #ffffff;
@@ -1821,7 +1821,7 @@ a {
   }
 
   .join-title {
-    font-size: 32px;
+    font-size: 20px;
   }
 
   .join-description {
@@ -2085,7 +2085,7 @@ a {
   }
 
   .join-title {
-    font-size: 28px;
+    font-size: 19px;
   }
 
   .join-description {

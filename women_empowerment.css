@@ -129,7 +129,7 @@ a {
    THE COMMUNITY GAP — SPLIT PANEL
    ============================================================ */
 .women-gap-section {
-    background-color: #FFF7F4;
+    background-color: var(--white);
     padding: var(--section-py) var(--section-px);
 }
 
@@ -161,7 +161,7 @@ a {
     font-family: var(--font-heading);
     font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     font-weight: 800;
-    color: var(--text-dark);
+    color: var(--primary-orange);
     line-height: 1.15;
 }
 
@@ -192,7 +192,7 @@ a {
 }
 
 .women-gap-item:hover {
-    background: #FFF0EB;
+    background: var(--light-gray);
     border-color: var(--primary-orange);
     box-shadow: 0 6px 20px rgba(255, 87, 34, 0.12);
 }
@@ -290,7 +290,7 @@ a {
    ============================================================ */
 .women-impact-section {
     padding: var(--section-py) var(--section-px);
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d1a0e 50%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
     position: relative;
     overflow: hidden;
 }
