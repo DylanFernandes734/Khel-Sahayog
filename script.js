@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dropdownBackdrop.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
+                dropdownBackdrop.classList.remove('active');
             });
         }
     }

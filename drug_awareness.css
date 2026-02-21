@@ -72,12 +72,12 @@ a {
 
 .drug-hero-content {
     position: relative;
-    z-index: 2;
-    padding: 120px clamp(1.5rem, 9vw, 8rem) 80px;
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+    text-align: left;
 }
 
 .drug-hero-title {
