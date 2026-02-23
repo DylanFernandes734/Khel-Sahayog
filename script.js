@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Reset any stale nav/backdrop states on page load (fixes white space after navigation)
+    document.querySelectorAll('.nav-menu, .dropdown-menu, .dropdown-backdrop, .mobile-menu-toggle').forEach(el => {
+        el.classList.remove('active', 'mobile-active', 'expanded');
+    });
+    document.body.style.overflow = '';
+
     // Dropdown menu functionality
     const programsDropdown = document.querySelector('.programs-dropdown');
     const dropdownMenu = document.querySelector('.dropdown-menu');
