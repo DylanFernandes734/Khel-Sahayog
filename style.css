@@ -1546,8 +1546,8 @@ a {
   }
 
   .footer-logo-img {
-    width: 90px;
-    height: 90px;
+    width: clamp(80px, 15vw, 120px);
+    height: clamp(80px, 15vw, 120px);
     position: static;
   }
 
@@ -1555,8 +1555,8 @@ a {
     align-items: flex-start;
     text-align: left;
     padding-top: 0;
-    margin-top: -6px;
-    font-size: 14px;
+    margin-top: clamp(-16px, -3vw, -8px);
+    font-size: clamp(14px, 3.5vw, 18px);
   }
 
   .footer-logo-text span {
