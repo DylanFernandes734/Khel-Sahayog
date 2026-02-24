@@ -567,7 +567,12 @@ body {
     .nav-menu {
         flex-direction: column;
         gap: 12px;
-        text-align: center;
+        text-align: left;
+    }
+
+    .dropdown-link {
+        text-align: left;
+        padding-left: 48px !important;
     }
 
     .nav-actions {

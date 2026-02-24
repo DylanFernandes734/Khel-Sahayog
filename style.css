@@ -2510,8 +2510,14 @@ a {
 
 
   .nav-buttons .btn-primary,
-  .nav-buttons .btn-secondary,
   .nav-buttons .btn-outline {
+    display: flex;
+    padding: 7px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .nav-buttons .btn-secondary {
     display: none;
   }
 
@@ -2520,6 +2526,7 @@ a {
     display: flex !important;
     position: relative;
     z-index: 10000;
+    margin-left: 8px;
   }
 
 

@@ -457,8 +457,8 @@ button {
     }
 
     .hero {
-        padding-top: 270px;
-        padding-bottom: 230px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     .hero-content {
@@ -495,6 +495,22 @@ button {
         gap: 20px;
         font-size: 14px;
     }
+
+    .hero-buttons {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 12px;
+    }
+
+    .cta-button,
+    .cta-button-outline {
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+        white-space: nowrap;
+        padding: 10px 8px;
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -511,13 +527,22 @@ button {
         font-size: 24px;
     }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+    .impact-heading {
+        font-size: 22px;
     }
 
-    .cta-button {
-        width: 100%;
-        max-width: 300px;
+    .hero-buttons {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 12px;
+    }
+
+    .cta-button,
+    .cta-button-outline {
+        flex: 1;
+        min-width: 0;
+        font-size: 13px;
+        padding: 10px 12px;
+        white-space: nowrap;
     }
 }
