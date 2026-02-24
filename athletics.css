@@ -428,10 +428,12 @@
 
 .athletics-cta-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(24px, 5vw, 36px);
+    font-size: clamp(16px, 5.5vw, 38px);
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 16px;
+    padding: 0 5px;
+    white-space: nowrap;
 }
 
 .athletics-cta-text {
