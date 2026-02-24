@@ -159,7 +159,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    text-align: center;
 }
 
 .context-box {
@@ -484,11 +483,10 @@ body {
 .cta-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: clamp(16px, 5.5vw, 38px);
+    font-size: clamp(16px, 4.5vw, 28px);
     color: #FFFFFF;
     margin-bottom: 24px;
     padding: 0 5px;
-    white-space: nowrap;
 }
 
 .cta-description {
@@ -504,6 +502,12 @@ body {
     display: flex;
     gap: 16px;
     justify-content: center;
+}
+
+.cta-buttons .btn {
+    white-space: nowrap;
+    padding: 10px 16px;
+    font-size: 14px;
 }
 
 
@@ -549,6 +553,11 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    .why-badminton-section {
+        padding: 40px 20px;
+    }
+
     .nav-wrapper {
         flex-direction: column;
         gap: 20px;
@@ -609,8 +618,29 @@ body {
         margin-bottom: 20px;
     }
 
-    .benefits-grid {
-        grid-template-columns: 1fr;
+    .badminton-benefits {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .badminton-left-column {
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+
+    .why-badminton-title {
+        text-align: left !important;
+        font-size: 26px;
+    }
+
+    .why-badminton-description {
+        text-align: left !important;
+    }
+
+    .context-box,
+    .context-title,
+    .context-text {
+        text-align: center !important;
     }
 
     .pathway-steps {
@@ -637,6 +667,11 @@ body {
 
 
 @media (max-width: 480px) {
+
+    .why-badminton-section {
+        padding: 40px 20px;
+    }
+
     .hero-content {
         padding: 0 16px;
     }
