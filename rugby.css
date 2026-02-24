@@ -287,7 +287,8 @@
     color: var(--primary-orange);
     margin: 0 0 20px 0;
     text-align: center;
-    padding-left: 3rem;
+    padding-left: 0;
+    width: 100%;
 }
 
 .program-features-list {

@@ -201,7 +201,7 @@
 }
 
 .program-card2 {
-    background-color: #2B2B2B;
+    background-color: #1C1C1C;
     border-radius: 20px;
     padding: 48px;
     display: flex;
@@ -210,12 +210,12 @@
     min-width: 0;
     max-width: 550px;
     width: 100%;
-    border: 1px solid #3a3a3a;
+    border: 1px solid #2a2a2a;
     min-height: 250px;
 }
 
 .program-card1 {
-    background-color: #2B2B2B;
+    background-color: #1C1C1C;
     border-radius: 20px;
     padding: 48px;
     display: flex;
@@ -224,7 +224,7 @@
     min-width: 0;
     max-width: 550px;
     width: 100%;
-    border: 1px solid #3a3a3a;
+    border: 1px solid #2a2a2a;
     min-height: 250px;
 }
 
@@ -235,7 +235,8 @@
     color: #FF5722;
     margin: 0 0 20px 0;
     text-align: center;
-    padding-left: 3rem;
+    padding-left: 0;
+    width: 100%;
 }
 
 .program-features-list {
