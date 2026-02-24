@@ -457,8 +457,9 @@ button {
     }
 
     .hero {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 90px;
+        padding-bottom: 30px;
+        min-height: auto;
     }
 
     .hero-content {
